@@ -32,3 +32,24 @@ export default async function Home() {
     
   )
 }
+
+//way 2 for useclient 
+/*
+export default function Home() {
+  useEffect(() => {
+    fetch("https://api.quotable.io/random")
+      .then((resp) => {
+        return resp.json();
+      })
+      .then((resp) => {
+        console.log("resp", resp);
+        console.log("quote", resp.content);
+      })
+      .catch((err) => {
+        console.log("Something went wrong", err);
+      });
+  }, []);
+
+  return <h1>Hello world</h1>;
+}
+*/
